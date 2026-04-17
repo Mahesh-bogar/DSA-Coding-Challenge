@@ -1,0 +1,38 @@
+import java.util.*;
+
+class MaxFrequencyElements {
+
+    public static int maxFrequencyElements(int[] nums) {
+
+        HashMap<Integer,Integer> map = new HashMap<>();
+
+        for(int key : nums) {
+            map.put(key, map.getOrDefault(key, 0) + 1);
+        }
+
+        int max = 0;
+
+        for(int val : map.values()) {
+            if(val > max) {
+                max = val;
+            }
+        }
+
+        int count = 0;
+
+        for(int val : map.values()) {
+            if(val == max) {
+                count += val;
+            }
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+
+        int[] nums = {1,2,2,3,1,4};
+
+        System.out.println(maxFrequencyElements(nums));
+    }
+}
