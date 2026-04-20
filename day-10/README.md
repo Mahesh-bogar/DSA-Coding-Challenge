@@ -1,4 +1,4 @@
-# Day 11 - To Lower Case (String Manipulation)
+# Day 10 - To Lower Case (String Manipulation)
 
 ## 🧠 Problem
 Convert all uppercase letters in a string to lowercase.
